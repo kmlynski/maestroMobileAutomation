@@ -1,0 +1,23 @@
+# flow.yaml
+
+appId: pl.testingcup.mrbuggymobile
+env:
+    USERNAME: "tester"
+    PASSWORD: "Password2#"
+---
+- launchApp
+- tapOn: "Next"
+- assertVisible: "To-do list"
+- assertVisible: "The content of the task"
+- assertVisible: "Refresh the task"
+- assertVisible: "Settings"
+- assertVisible: "Timer"
+- tapOn: "Next"
+- tapOn: "OK, I get it"
+- tapOn: "USERNAME"
+- inputText: ${USERNAME}
+- hideKeyboard
+- tapOn: "PASSWORD"
+- inputText: ${PASSWORD}
+- hideKeyboard
+- tapOn: "LETS GO!"
